@@ -1,15 +1,21 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {LoaderService} from "./services/loader/loader.service";
+import { HeaderComponent } from './components/header/header.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderComponent
+  ],
   imports: [
     CommonModule
   ],
-  providers: [LoaderService]
+  providers: [LoaderService],
+  exports: [
+    HeaderComponent
+  ]
 })
 export class CoreModule {
   static forRoot(): ModuleWithProviders<CoreModule> {
