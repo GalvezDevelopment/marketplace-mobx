@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/styles/variables';
+@import './app/styles/colors';
+
+$white: #ffffff;
+
+$theme-colors: (
+  "light":      #e8e9ee,
+  "dark":       #d45655,
+  "primary":    #244375,
+  "secondary":  #b21d56,
+  "info":       #696c92,
+  "success":    #189757,
+  "warning":    #dfc71a,
+  "danger":     #eb180c,
+);
+
+// Variable overrides first
+$primary: map-get($theme-colors, 'primary');
+$enable-shadows: true;
+$prefix: "mo-";
+
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
