@@ -1,3 +1,7 @@
-<div *mobxAutorun>
-  <p>{{store.total}}</p>
+<div class="container-lg" *mobxAutorun>
+  <div class="row">
+    <div class="col-3 gy-5" *ngFor="let product of store.products">
+      <app-product-card [product]="product" (click)="addInBasket($event)"></app-product-card>
+    </div>
+  </div>
 </div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import {ProductApiService} from "./services/product-api/product-api.service";
 import {MobxAngularModule} from "mobx-angular";
+import {SharedModule} from "../../shared/shared.module";
 
 
 
@@ -13,7 +14,8 @@ import {MobxAngularModule} from "mobx-angular";
   providers: [ProductApiService],
   imports: [
     CommonModule,
-    MobxAngularModule
+    MobxAngularModule,
+    SharedModule
   ],
   exports: [HomeComponent]
 })

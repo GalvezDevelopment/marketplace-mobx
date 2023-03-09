@@ -5,8 +5,9 @@
     </div>
     <div class="col-10"></div>
     <div class="col">
-      <a routerLink="/basket" class="btn btn-link text-white">
+      <a routerLink="/basket" class="btn btn-link text-white float-end position-relative">
         <span class="material-symbols-outlined">shopping_basket</span>
+        <span class="badge bg-secondary position-absolute top-0 start-50 rounded-pill">{{basketStore.basket.length}}</span>
       </a>
     </div>
   </div>
